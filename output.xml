@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.5 on darwin)" generated="20230904 18:44:10.209" rpa="false" schemaversion="4">
+<suite id="s1" name="Web Assignment 002" source="/Users/dewdoppio/Desktop/automate camp/automateCamp_Assignment/automateCamp_webAssignment002/web_assignment_002.robot">
+<test id="s1-t1" name="Automate Test Web Assignment 002" line="56">
+<kw name="Visit Website">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230904 18:44:10.294" level="INFO">Opening browser 'chrome' to base url 'http://testphp.vulnweb.com/login.php'.</msg>
+<status status="PASS" starttime="20230904 18:44:10.294" endtime="20230904 18:44:12.513"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230904 18:44:12.513" endtime="20230904 18:44:12.918"/>
+</kw>
+<status status="PASS" starttime="20230904 18:44:10.294" endtime="20230904 18:44:12.918"/>
+</kw>
+<kw name="Login Wtih Username And Password">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INPUT_LOGIN_USERNAME}</arg>
+<arg>${LOGIN_USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230904 18:44:12.919" level="INFO">Typing text 'test' into text field '//div[@id='content']//form//input[@name='uname']'.</msg>
+<status status="PASS" starttime="20230904 18:44:12.919" endtime="20230904 18:44:13.043"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INPUT_LOGIN_PASSWORD}</arg>
+<arg>${LOGIN_PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230904 18:44:13.043" level="INFO">Typing text 'test' into text field '//div[@id='content']//form//input[@name='pass']'.</msg>
+<status status="PASS" starttime="20230904 18:44:13.043" endtime="20230904 18:44:13.077"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON_LOGIN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230904 18:44:13.078" level="INFO">Clicking element '//div[@id='content']//form//input[@value='login']'.</msg>
+<status status="PASS" starttime="20230904 18:44:13.077" endtime="20230904 18:44:13.359"/>
+</kw>
+<status status="PASS" starttime="20230904 18:44:12.919" endtime="20230904 18:44:13.359"/>
+</kw>
+<kw name="Verify Login Success">
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<arg>${GLOBAL_NAV_LOGOUT}</arg>
+<arg>${TITLE_LOGOUT_MESSAGE}</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" starttime="20230904 18:44:13.359" endtime="20230904 18:44:13.379"/>
+</kw>
+<status status="PASS" starttime="20230904 18:44:13.359" endtime="20230904 18:44:13.379"/>
+</kw>
+<kw name="Click Browse Categories">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${NAV_BAR_BROWSE_CATEGORIES}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230904 18:44:13.380" level="INFO">Clicking element '//div[@id='sectionLinks']//li//a[text()='Browse categories']'.</msg>
+<status status="PASS" starttime="20230904 18:44:13.380" endtime="20230904 18:44:13.660"/>
+</kw>
+<status status="PASS" starttime="20230904 18:44:13.380" endtime="20230904 18:44:13.660"/>
+</kw>
+<kw name="Verify Visit Categories Page Success">
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<arg>${CATEGOTIES_PAGE_TITLE}</arg>
+<arg>${CATEGOTIES_PAGE_TITLE_TEXT}</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" starttime="20230904 18:44:13.660" endtime="20230904 18:44:13.674"/>
+</kw>
+<status status="PASS" starttime="20230904 18:44:13.660" endtime="20230904 18:44:13.674"/>
+</kw>
+<kw name="Click Category Posters">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${CATEGOTIES_PAGE_LINK_POSTERS}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230904 18:44:13.674" level="INFO">Clicking element '//div[@id='content']//div[a[h3[text()='Posters']]]//a'.</msg>
+<status status="PASS" starttime="20230904 18:44:13.674" endtime="20230904 18:44:14.628"/>
+</kw>
+<status status="PASS" starttime="20230904 18:44:13.674" endtime="20230904 18:44:14.628"/>
+</kw>
+<kw name="Verify Visit Posters Page Success">
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<arg>${POSTERS_PAGE_TITLE}</arg>
+<arg>${POSTERS_PAGE_TITLE_TEXT}</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" starttime="20230904 18:44:14.628" endtime="20230904 18:44:14.641"/>
+</kw>
+<status status="PASS" starttime="20230904 18:44:14.628" endtime="20230904 18:44:14.641"/>
+</kw>
+<kw name="Check Trees Poster In Posters Page">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${POSTERS_PAGE_TREES_DIV}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20230904 18:44:14.650" level="INFO">Current page contains element '//div[a[h3[text()='Trees']]]'.</msg>
+<status status="PASS" starttime="20230904 18:44:14.642" endtime="20230904 18:44:14.650"/>
+</kw>
+<kw name="Check Trees Poster Detail In Posters Page">
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${POSTERS_PAGE_TREES_DETAIL}</arg>
+<arg>${POSTERS_PAGE_TREES_DETAIL_TEXT}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230904 18:44:14.651" level="INFO">Verifying element '//div[a[h3[text()='Trees']]]//p[1]' contains exact text 'bla bla bla'.</msg>
+<status status="PASS" starttime="20230904 18:44:14.651" endtime="20230904 18:44:14.664"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${POSTERS_PAGE_TREES_ARTIST}</arg>
+<arg>${POSTERS_PAGE_TREES_ARTIST_TEXT}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230904 18:44:14.665" level="INFO">Verifying element '//div[a[h3[text()='Trees']]]//a[contains(@href,'artists')]' contains exact text 'Blad3'.</msg>
+<status status="PASS" starttime="20230904 18:44:14.665" endtime="20230904 18:44:14.678"/>
+</kw>
+<status status="PASS" starttime="20230904 18:44:14.650" endtime="20230904 18:44:14.678"/>
+</kw>
+<status status="PASS" starttime="20230904 18:44:14.642" endtime="20230904 18:44:14.678"/>
+</kw>
+<kw name="Click Posters Trees">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${POSTERS_PAGE_TREES_LINK}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230904 18:44:14.678" level="INFO">Clicking link '//div[a[h3[text()='Trees']]]//a[contains(@href,'product')]'.</msg>
+<status status="PASS" starttime="20230904 18:44:14.678" endtime="20230904 18:44:15.172"/>
+</kw>
+<status status="PASS" starttime="20230904 18:44:14.678" endtime="20230904 18:44:15.172"/>
+</kw>
+<kw name="Verify Visit Tress Page Success">
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<arg>${TREES_PAGE_TITLE}</arg>
+<arg>${TREES_PAGE_TITLETEXT}</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" starttime="20230904 18:44:15.173" endtime="20230904 18:44:15.186"/>
+</kw>
+<status status="PASS" starttime="20230904 18:44:15.172" endtime="20230904 18:44:15.186"/>
+</kw>
+<kw name="Click Add This Picture To Cart">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${INPUT_ADD_THIS_PICTURE_TO_CART}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230904 18:44:15.187" level="INFO">Clicking element '//form//input[@value='add this picture to cart']'.</msg>
+<status status="PASS" starttime="20230904 18:44:15.186" endtime="20230904 18:44:15.570"/>
+</kw>
+<status status="PASS" starttime="20230904 18:44:15.186" endtime="20230904 18:44:15.570"/>
+</kw>
+<kw name="Verify Visit Cart Page Success">
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<arg>${CART_TABLE_1_TH}</arg>
+<arg>${CART_TABLE_1_TH_TEXT}</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" starttime="20230904 18:44:15.571" endtime="20230904 18:44:15.587"/>
+</kw>
+<status status="PASS" starttime="20230904 18:44:15.570" endtime="20230904 18:44:15.587"/>
+</kw>
+<kw name="Verify Cart Total Is Correct">
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${CART_TABLE_TOTAL}</arg>
+<arg>Total: $${TRESS_POSTER_PRICE}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230904 18:44:15.588" level="INFO">Verifying element '//div[@id='content']//h3[contains(text(),'Total')]' contains exact text 'Total: $15000'.</msg>
+<status status="PASS" starttime="20230904 18:44:15.587" endtime="20230904 18:44:15.602"/>
+</kw>
+<status status="PASS" starttime="20230904 18:44:15.587" endtime="20230904 18:44:15.602"/>
+</kw>
+<status status="PASS" starttime="20230904 18:44:10.294" endtime="20230904 18:44:15.602"/>
+</test>
+<status status="PASS" starttime="20230904 18:44:10.210" endtime="20230904 18:44:15.602"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Web Assignment 002">Web Assignment 002</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
